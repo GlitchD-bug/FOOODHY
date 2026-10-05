@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Manrope';
+    text-decoration: none;
+}
+
+body {
+    background-color: #f4f7f5;
+    color: #2d3732;
+    padding: 140px 20px 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.title {
+    font-size: 30px;
+    margin: 0;
+}
+ 
+.top-left-container {
+    display: flex;
+    gap: 10px;
+}
+ 
+.btn {
+    background-color: transparent;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+ 
+.btn:hover {
+    cursor: pointer;
+}
+
+.quiz-container {
+    max-width: 650px;
+    width: 100%;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+h1 {
+    color: #1e4620;
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #627267;
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+
+.card {
+    position: relative;
+    margin-bottom: 25px;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-left: 6px solid transparent;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+}
+
+.card p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+
+.verde-1 { background-color: #e8f5e9; border-left-color: #81c784; color: #1b5e20; }
+.verde-2 { background-color: #e0f2f1; border-left-color: #4db6ac; color: #004d40; }
+.verde-3 { background-color: #f1f8e9; border-left-color: #aed581; color: #33691e; }
+.verde-4 { background-color: #e8f5e9; border-left-color: #66bb6a; color: #1b5e20; }
+.verde-5 { background-color: #e0f2f1; border-left-color: #26a69a; color: #004d40; }
+
+.badge {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    opacity: 0.7;
+    letter-spacing: 0.5px;
+}
+
+.card label {
+    display: block;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: background 0.2s, padding-left 0.2s;
+}
+
+.card label:last-of-type {
+    margin-bottom: 0;
+}
+
+.card label:hover {
+    background: rgba(255, 255, 255, 0.9);
+    padding-left: 18px;
+}
+
+.card input[type="radio"] {
+    margin-right: 10px;
+    accent-color: #2e7d32;
+    transform: scale(1.1);
+    vertical-align: middle;
+}
+
+.quiz-container > button {
+    display: block;
+    width: 100%;
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 16px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(46, 125, 50, 0.2);
+    transition: background 0.2s, transform 0.1s;
+    margin-top: 30px;
+}
+
+.quiz-container > button:hover {
+    background-color: #1b5e20;
+    transform: translateY(-1px);
+}
+
+.error-msg {
+    margin-top: 20px;
+    background-color: #ffebee;
+    color: #c62828;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    border-left: 4px solid #c62828;
+}
+
+.result-box {
+    margin-top: 30px;
+    background: #f1f8e9;
+    border: 2px dashed #81c784;
+    padding: 25px;
+    border-radius: 16px;
+    text-align: center;
+    animation: popIn 0.4s ease-out;
+}
+
+.result-title {
+    font-size: 1.3rem;
+    color: #1b5e20;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.recipe-badge {
+    margin-top: 15px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+    display: inline-block;
+    width: 100%;
+}
+
+.recipe-badge span {
+    display: block;
+    font-size: 0.85rem;
+    color: #627267;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.recipe-link {
+    font-size: 1.4rem;
+    color: #2e7d32;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid #81c784;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.recipe-link:hover {
+    color: #1b5e20;
+    border-color: #1b5e20;
+}
+
+#cursor-customizado {
+    pointer-events: none;
+    position: fixed;
+}
+
+@keyframes popIn {
+    0% { opacity: 0; transform: scale(0.95); }
+    100% { opacity: 1; transform: scale(1); }
+}

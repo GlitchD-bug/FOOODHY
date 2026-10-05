@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="criar.css">
+
+    <title>Fooodhy</title>
+</head>
+<body>
+    <header>
+        <a class="logo" href="landing2.html"> Fooodhy </a>
+        <nav class="pesquisa">
+            <form action="#" method="get">
+                <input type="search" name="busca" placeholder="Pesquisar">
+                <button type="submit">Buscar</button>
+            </form> 
+        </nav>
+        <nav class="menu">
+            <a class="headmenu" href="menus.html"> Menu </a>
+            <a class="headmenu" id="perfil" href="usuario.html"> Perfil </a>
+        </nav>
+    </header>
+
+
+    <main class="pagina">
+    <h2 class="titulo-pagina">Compartilhe sua receita</h2>
+    <p class="subtitulo">
+      Preencha os dados abaixo para publicar uma receita saudável para a comunidade.
+    </p>
+
+    <section class="card">
+      <form action="#" method="post">
+        <div class="campo">
+          <label for="titulo">Nome da receita *</label>
+          <input id="titulo" name="titulo" type="text" placeholder="Ex.: Bolo de banana sem açúcar" required />
+        </div>
+
+        <div class="linha-2">
+          <div class="campo">
+            <label for="categoria">Categoria *</label>
+            <select id="categoria" name="categoria" required>
+              <option value="">Selecione</option>
+              <option>Café da manhã</option>
+              <option>Almoço</option>
+              <option>Jantar</option>
+              <option>Lanche</option>
+              <option>Sobremesa</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label for="dificuldade">Dificuldade *</label>
+            <select id="dificuldade" name="dificuldade" required>
+              <option value="">Selecione</option>
+              <option>Fácil</option>
+              <option>Média</option>
+              <option>Difícil</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="linha-2">
+          <div class="campo">
+              <label for="tempo">Tempo (min) *</label>
+            <input id="tempo" name="tempo" type="number" min="1" placeholder="30" required />
+          </div>
+
+          <div class="campo">
+            <label for="porcoes">Porções *</label>
+            <input id="porcoes" name="porcoes" type="number" min="1" placeholder="4" required />
+          </div>
+        </div>
+
+        <div class="campo">
+          <label for="descricao">Descrição curta</label>
+          <input id="descricao" name="descricao" type="text" placeholder="Resumo rápido da receita" />
+        </div>
+        
+        <div class="campo">
+          <label for="ingredientes">Ingredientes *</label>
+          <textarea id="ingredientes" name="ingredientes" placeholder="Exemplo:
+2 bananas maduras
+1 xícara de aveia
+1 colher de canela" required></textarea>
+        </div>
+
+        <div class="campo">
+          <label for="preparo">Modo de preparo *</label>
+          <textarea id="preparo" name="preparo" placeholder="Descreva o passo a passo" required></textarea>
+        </div>
+
+        <fieldset>
+          <legend>Etiquetas alimentares</legend>
+
+          <div class="opcoes">
+            <label class="chip">
+              <input type="checkbox" name="restricoes" value="Sem glúten" />
+              <span>Sem glúten</span>
+            </label>
+
+            <label class="chip">
+              <input type="checkbox" name="restricoes" value="Sem lactose" />
+              <span>Sem lactose</span>
+            </label>
+
+            <label class="chip">
+              <input type="checkbox" name="restricoes" value="Sem ovo" />
+              <span>Sem ovo</span>
+            </label>
+
+            <label class="chip">
+              <input type="checkbox" name="restricoes" value="Vegana" />
+              <span>Vegana</span>
+            </label>
+
+            <label class="chip">
+              <input type="checkbox" name="restricoes" value="Sem açúcar" />
+              <span>Sem açúcar</span>
+            </label>
+
+            <label class="chip">
+              <input type="checkbox" name="restricoes" value="Low carb" />
+              <span>Low carb</span>
+            </label>
+          </div>
+
+          <details class="outra-restricao">
+            <summary class="btn-outra">+ Outra restrição</summary>
+            <div class="campo-outra">
+              <label for="outra_restricao">Digite a restrição</label>
+              <input
+                type="text"
+                id="outra_restricao"
+                name="outra_restricao"
+                placeholder="Ex.: Sem amendoim"
+              />
+            </div>
+          </details>
+        </fieldset>
+
+        <div class="campo">
+          <label for="observacoes">Observações de segurança alimentar</label>
+          <textarea
+            id="observacoes"
+            name="observacoes"
+            placeholder="Ex.: atenção à contaminação cruzada de utensílios com glúten."
+          ></textarea>
+        </div>
+
+        <div class="acoes">
+          <button type="submit" class="btn btn-primario">Publicar receita</button>
+          <button type="reset" class="btn btn-secundario">Limpar campos</button>
+        </div>
+
+      </form>
+    </section>
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="cad.css">
+        <title>Fooodhy</title>
+    </head>
+    
+
+    <body>
+
+   <header>
+        <a class="logo" href="landing.html"> Fooodhy </a>
+    </header>
+
+        <main>
+        <form>
+           <div class="card">
+            <div class="inside">
+                <div class="texto">
+                    <h2> Cadastre-se </h2>
+                    <p> Cadastre-se para ter mais acesso ao resto do site! </p>
+                </div>
+            <div class="inputs">
+                    <p> Nome de usuário: </p>
+                    <input type="text" placeholder="Insira o seu nome de usuário (4 a 20 caracteres)" 
+                    id="nome" minlength="4" maxlength="20" required>
+
+                    <p> Email: </p>
+                    <input type="email" placeholder="Insira o seu email" id="email" required>
+
+                    <p> Senha</p>
+                    <input type="password" placeholder="Insira uma senha(5 a 28 caracteres)" id="senha" name="senha" minlength="5" 
+                    maxlength="28" required>
+            </div>
+            <div class="opcoes2">
+                <label class="lembrar">
+                    <input type="checkbox" name="lembrar"> Lembrar de mim
+                </label>
+                <p class="lembrar"> Já tem uma conta? Faça <a href="login.html">login!</a></p>
+            </div>
+            
+                    <a href="login.html" class="btn"> Cadastre-se! </a> 
+                
+            </div>
+           </div>
+        </form>
+        </main>
+    </body>
+</html>

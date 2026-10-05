@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fooodhy - Comunidade</title>
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Manrope:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Manrope', sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #1b1b1b;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            background-color: #ffffff;
+            padding-bottom: 40px;
+        }
+
+        header {
+            background-color: #215a3a;
+            color: white;
+            padding: 26px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .title {
+            font-weight: 400; /* Garante que o container h1 não force o negrito */
+        }
+
+        .title a {
+            color: white;
+            text-decoration: none;
+            font-size: 32px;
+            font-weight: 400; /* Garante o texto Fooodhy totalmente sem negrito */
+            letter-spacing: -0.5px;
+        }
+
+        .top-left-container {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .btn {
+            color: white;
+            text-decoration: none;
+            font-size: 23px;
+            font-weight: 400;
+        }
+
+        .content-wrapper {
+            padding: 0 40px;
+        }
+
+        .fundoimg {
+            margin: 0 -40px 30px -40px;
+            height: 260px;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url('https://64.media.tumblr.com/eacf663191d5c562aa5066d6bfa03654/2ff8265d498187c7-cc/s1280x1920/7a809c2e092123cca36bfdb0d5f253a4ee309421.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            padding: 0 40px;
+        }
+
+        .banner {
+            background-color: #215a3a;
+            color: white;
+            padding: 22px 28px;
+            border-radius: 12px;
+            width: 100%;
+        }
+
+        .banner h2 {
+            margin: 0 0 6px 0;
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        .banner p {
+            margin: 0;
+            font-size: 13px;
+            font-weight: 400;
+            opacity: 0.9;
+        }
+
+        main h1 {
+            color: #215a3a;
+            font-size: 22px;
+            font-weight: 500;
+            margin-bottom: 20px;
+            margin-top: 10px;
+        }
+
+        .banner-topico {
+            background-color: #c9e8b9;
+            padding: 14px 20px;
+            margin-bottom: 12px;
+            border-radius: 10px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .banner-topico p {
+            margin: 0;
+            font-size: 14px;
+            color: #215a3a;
+            font-weight: 400;
+        }
+
+        .chat {
+            margin-top: 40px;
+            border-radius: 14px;
+            border: 1px solid #c9e8b9;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .chat-header {
+            background-color: #215a3a;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        .chat-header h2 {
+            margin: 0;
+            font-size: 20px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .chat-header p {
+            margin: 4px 0 0 0;
+            font-size: 10px;
+            font-weight: 500;
+            text-transform: uppercase;
+            opacity: 0.7;
+            letter-spacing: 1px;
+        }
+
+        .chat-body {
+            background-color: #e8f5e9;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .chat-icon {
+            width: 48px;
+            height: 48px;
+            border: 2px dashed #81c784;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px auto;
+            color: #81c784;
+            font-size: 18px;
+            transform: rotate(-45deg);
+        }
+
+        .chat-body h3 {
+            color: #555555;
+            font-size: 14px;
+            font-weight: 400;
+            margin: 0;
+        }
+
+        .chat-footer {
+            background-color: #e8f5e9;
+            padding: 20px 30px 30px 30px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .chat-footer input {
+            flex: 1;
+            background-color: #ffffff;
+            color: #333333;
+            padding: 14px 24px;
+            border: 1px solid #c9e8b9;
+            border-radius: 30px;
+            outline: none;
+            font-size: 14px;
+        }
+
+        .chat-footer input::placeholder {
+            color: #b0bec5;
+        }
+
+        .chat-footer button {
+            background-color: #215a3a;
+            color: white;
+            width: 44px;
+            height: 44px;
+            border: none;
+            border-radius: 50%;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .chat-footer button:hover {
+            background-color: #163d27;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1 class="title"><a href="landing2.html">Fooodhy</a></h1>
+            <ul class="top-left-container">
+                <li><a href="quiz2.html" class="btn">Quiz</a></li>
+                <li><a href="usuario.html" class="btn">Perfil</a></li>
+            </ul>
+        </header>
+
+        <div class="content-wrapper">
+            <div class="fundoimg">
+                <div class="banner">
+                    <h2>Compartilhe experiências 🌱</h2>
+                    <p>Converse com pessoas que possuem necessidades alimentares parecidas com você!</p>
+                </div>
+            </div>
+
+            <main>
+                <h1>Tópicos em alta!</h1>
+
+                <div class="banner-topico">
+                    <p>"Nova receita de Brownie Fit"</p>
+                </div>
+                <div class="banner-topico">
+                    <p>"Níveis de glicose mais baixos"</p>
+                </div>
+                <div class="banner-topico">
+                    <p>"Receitas sem glúten"</p>
+                </div>
+
+                <div class="chat">
+                    <div class="chat-header">
+                        <h2>Papo Saudável</h2>
+                        <p>Comunidade Fooodhy</p>
+                    </div>
+                    
+                    <div class="chat-body">
+                        <div class="chat-icon">➔</div>
+                        <h3>Compartilhe algo positivo!</h3>
+                    </div>
+
+                    <div class="chat-footer">
+                        <input type="text" placeholder="Escreva sua mensagem...">
+                        <button type="button">➔</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+</body>
+</html>

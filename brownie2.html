@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="receitas.css" />
+    <title>Brownie2</title>
+    <style>
+      header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: #215a3a;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 99;
+}
+
+header a {
+    color: whitesmoke;
+}
+
+.logo {
+    font-size: 30px;
+    position: relative;
+}
+
+.headmenu {
+    font-size: 25px;
+    position: relative;
+    margin-left: 25px;
+}
+
+.headmenu::after,
+.logo::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.headmenu:hover::after,
+.logo:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.span1 {
+    padding-left: 10px;
+}
+
+    </style>
+  </head>
+
+    <header>
+        <a class="logo" href="menulanche2.html"> &lt; <span class="span1"> Voltar </span></a>
+        <nav>
+            <a class="headmenu" href="landing2.html"> Fooodhy </a>
+            <a class="headmenu" href="menus.html"> Menu </a>
+            <a class="headmenu" href="usuario.html"> Perfil </a>
+        </nav>
+    </header>
+
+  <body>
+    <main>
+      <div>
+      <img src="https://www.semculpanenhuma.com.br/wp-content/uploads/2023/10/Post-site-54.png">
+      </div>
+      <section class="igredientes">
+        <h2>Ingredientes:</h2>
+        <ul>
+          <li>3 colheres (sopa) de farinha de trigo</li>
+          <li>2 colheres (sopa) de açúcar (mascavo ou demerara funcionam muito bem)</li>
+          <li>1 colher (sopa) bem cheia de cacau em pó</li>
+          <li>1 colher (sopa) de óleo de coco (ou outro óleo vegetal de sua preferência)</li>
+          <li>3 a 4 colheres (sopa) de água ou leite vegetal (aveia, amêndoas, soja)</li>
+          <li>1 colher (chá) de gotas de chocolate meio amargo vegano (opcional)</li>
+        </ul>
+      </section>
+      <section class="modo-preparo">
+        <h2>Modo de preparo:</h2>
+        <ol>
+          <li>Direto na caneca, misture bem todos os ingredientes secos: a farinha, o açúcar e o cacau em pó.</li>
+          <li>Adicione o óleo e comece colocando 3 colheres de água ou leite vegetal. Misture bem com um garfo até formar uma massa bem grossa e homogênea (se achar muito seca, coloque a quarta colher de líquido).</li>
+          <li>Se for usar, jogue as gotas de chocolate por cima.</li>
+          <li>Leve ao micro-ondas em potência alta por 50 a 60 segundos. O centro deve continuar ligeiramente úmido para manter a textura de brownie. Deixe esfriar por 1 minuto antes de comer.</li>
+        </ol>
+      </section>
+      <section class="emoji">
+        <p>🥕</p>
+      </section>
+    </main>
+    <div class="comentarios">
+  <h2>Avaliações da Receita</h2>
+  
+  <div class="formulario-comentario">
+    <input type="text" placeholder="O que você achou dessa receita?">
+    <button class="btn-comentar">Avaliar</button>
+  </div>
+
+  <div class="item-comentario">
+    <div class="avatar">M</div>
+    <div class="info-comentario">
+      <span class="nome-usuario">@maria_cozinha</span>
+      <p class="texto-comentario">Fiz aqui em casa e todo mundo adorou! Perfeito.</p>
+    </div>
+  </div>
+</div>
+<div class="espacador-fim"></div>
+  </body>
+</html>

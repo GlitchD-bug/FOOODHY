@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="receitas.css">
+    <title>Lasanha2</title>
+    <style>
+      header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: #215a3a;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 99;
+}
+
+header a {
+    color: whitesmoke;
+}
+
+.logo {
+    font-size: 30px;
+    position: relative;
+}
+
+.headmenu {
+    font-size: 25px;
+    position: relative;
+    margin-left: 25px;
+}
+
+.headmenu::after,
+.logo::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.headmenu:hover::after,
+.logo:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.span1 {
+    padding-left: 10px;
+}
+
+    </style>
+  </head>
+
+      <header>
+        <a class="logo" href="menu2.html"> &lt; <span class="span1"> Voltar </span></a>
+        <nav>
+            <a class="headmenu" href="landing2.html"> Fooodhy </a>
+            <a class="headmenu" href="menus.html"> Menu </a>
+            <a class="headmenu" href="usuario.html"> Perfil </a>
+        </nav>
+    </header>
+
+  <body>
+    <main>
+      <div>
+      <img src="https://www.vilma.com.br/wp-content/uploads/2024/09/lasanha-de-abobrinha.jpg">
+      </div>
+      <section class="igredientes">
+        <h2>Ingredientes:</h2>
+        <ul>
+          <li>3 abobrinhas grandes cortadas em fatias finas no comprimento</li>
+          <li>500g de carne moída (patinho ou outra de sua preferência)</li>
+          <li>1 cebola média picada</li>
+          <li>2 dentes de alho amassados</li>
+          <li>300g de queijo muçarela fatiado ou ralado</li>
+          <li>1 lata de tomate pelado ou molho de tomate caseiro (sem açúcar adicionado)</li>
+          <li>1 xícara de creme de ricota ou ricota amassada</li>
+          <li>Azeite de oliva, sal, pimenta-do-reino e orégano a gosto</li>
+          <li>Queijo parmesão ralado para salpicar por cima</li>
+        </ul>
+      </section>
+      <section class="modo-preparo">
+        <h2>Modo de preparo:</h2>
+        <ol>
+          <li>Prepare a abobrinha (Passo Crítico): Fatie as abobrinhas no sentido do comprimento usando um mandolim ou uma faca afiada. Coloque as fatias em uma peneira ou sobre papel-toalha, salpique um pouco de sal e deixe descansar por 15 minutos. Depois, seque cada fatia pressionando levemente com papel-toalha para retirar toda a água que minou.</li>
+          <li>Faça o molho de carne: Em uma panela, aqueça o azeite e doure a cebola e o alho. Adicione a carne moída e cozinhe até dourar bem. Junte o tomate pelado ou molho, tempere com sal, pimenta e orégano. Deixe o molho apurar até que fique bem encorpado e mais sequinho (molho muito líquido vai amolecer a lasanha).</li>
+          <li>Montagem: Em um refratário que possa ir ao forno, espalhe uma camada fina de molho de carne no fundo. Faça uma camada com as fatias de abobrinha, cobrindo todo o espaço. Distribua um pouco do creme de ricota, adicione mais molho de carne e cubra com o queijo muçarela. Repita o processo até finalizar os ingredientes.</li>
+          <li>Finalização: A última camada deve ser de abobrinha, um pouco de molho, muçarela e o queijo parmesão ralado por cima.</li>
+          <li>Forno: Leve ao forno preaquecido a 180°C por cerca de 30 a 35 minutos, ou até que a abobrinha esteja macia e o queijo de cima esteja bem dourado e borbulhando. Retire do forno e aguarde cerca de 10 a 15 minutos antes de cortar, para que as camadas se firmem.</li>
+        </ol>
+      </section>
+      <section class="emoji">
+        <p>🥕</p>
+      </section>
+    </main>
+    <div class="comentarios">
+  <h2>Avaliações da Receita</h2>
+  
+  <div class="formulario-comentario">
+    <input type="text" placeholder="O que você achou dessa receita?">
+    <button class="btn-comentar">Avaliar</button>
+  </div>
+
+  <div class="item-comentario">
+    <div class="avatar">M</div>
+    <div class="info-comentario">
+      <span class="nome-usuario">@maria_cozinha</span>
+      <p class="texto-comentario">Fiz aqui em casa e todo mundo adorou! Perfeito.</p>
+    </div>
+  </div>
+</div>
+<div class="espacador-fim"></div>
+  </body>
+</html>

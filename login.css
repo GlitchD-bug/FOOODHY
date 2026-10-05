@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: #215a3a;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    z-index: 99;
+}
+
+header a {
+    color: whitesmoke;
+}
+
+.logo::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.logo:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.logo {
+    font-size: 30px;
+    position: relative;
+}
+
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Manrope', sans-serif;
+    background: #D0EBD2;
+    background: linear-gradient(95deg, rgba(208, 235, 210, 1) 47%, rgba(234, 245, 234, 1) 66%);
+}
+
+main {
+    min-height: 100vh;
+    padding: 120px 24px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    animation: entrada-card 0.7s ease-out both;
+}
+
+@keyframes entrada-card {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    width: 100%;
+    max-width: 560px;
+    border-radius: 30px;
+    background: rgba(81, 114, 88, 0.164);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.26);
+    box-shadow: 0 15px 40px rgba(19, 65, 38, 0.18);
+    text-align: center;
+}
+
+.inside {
+    padding: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.texto h2 {
+    padding: 10px;
+    font-size: 38px;
+    color: #173626;
+}
+
+.texto p {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #355844;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs p {
+    color: #355844;
+    padding: 8px;
+}
+
+.inputs input {
+    width: 100%;
+    padding: 12px 6px;
+    margin-bottom: 20px;
+    border: 0;
+    border-bottom: 1px solid #376348;
+    background: transparent;
+    font-size: 18px;
+}
+
+.inputs input::placeholder {
+    color: #6b8a78;
+}
+
+.lembrar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    color: #51805b;
+}
+
+.lembrar input[type="checkbox"] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    border:  2px solid #376348;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.103);
+    cursor: pointer;
+    display: grid;
+    place-content: center;
+}
+
+.lembrar input[type="checkbox"]:checked {
+    background: #215a3a85;
+}
+
+.lembrar input[type="checkbox"]:checked::after {
+    content: "";
+    width: 5px;
+    height: 9px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    margin: 2px;
+}
+
+.card .cadas,
+.card .cadas:visited {
+    color: #5fa46e;
+}
+
+.card .cadas:hover {
+    color: #365a46a8;
+}
+
+
+.btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 8px;
+    padding-top: 18px;
+    width: 100%;
+    border: 0;
+    border-radius: 24px;
+    padding: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+    font-weight: bold;
+    background-color: #215a3a;
+    color:#D0EBD2;
+}
+
+.btn:hover {
+    opacity: 0.6;
+    background-color: #2f6b45;
+}
+

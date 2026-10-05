@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Quiz fooodhy</title>
+<link rel="stylesheet" href="quiz.css">
+<style>
+    
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: #215a3a;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    z-index: 99;
+}
+
+header a {
+    color: whitesmoke;
+}
+
+
+.logo::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.logo:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.logo {
+    font-size: 30px;
+    position: relative;
+
+}
+</style>
+</head>
+<body>
+
+    <header>
+        <a class="logo" href="landing.html"> Fooodhy </a>
+    </header>
+
+ 
+<div class="quiz-container">
+    <h1>FOOODHY descobre seu estilo</h1>
+    <p class="subtitle">Responda às 8 perguntas e descubra a receita perfeita do nosso site para o seu momento!</p>
+     
+    <div class="perg card verde-1">
+        <span class="badge">Passo 1 de 8</span>
+        <p>1. Qual é o foco da sua refeição no momento?</p>
+        <label><input type="radio" name="q1" value="almoco"> Preciso de uma refeição principal (Almoço/Jantar)</label>
+        <label><input type="radio" name="q1" value="lanche"> Quero algo rápido para o meio da tarde ou manhã (Lanche)</label>
+    </div>
+  
+    <div class="perg card verde-2">
+        <span class="badge">Passo 2 de 8</span>
+        <p>2. Quanto tempo você tem disponível para cozinhar hoje?</p>
+        <label><input type="radio" name="q2" value="rapido"> Estou na correria, quero algo vapt-vupt!</label>
+        <label><input type="radio" name="q2" value="elaborado"> Tenho tempo para ligar o forno ou fogão e caprichar.</label>
+    </div>
+ 
+    <div class="perg card verde-3">
+        <span class="badge">Passo 3 de 8</span>
+        <p>3. Qual é o seu estilo ou restrição alimentar preferida?</p>
+        <label><input type="radio" name="q3" value="lowcarb"> Prefiro opções Low Carb ou mais leves</label>
+        <label><input type="radio" name="q3" value="comum"> Como de tudo, sem restrições</label>
+        <label><input type="radio" name="q3" value="veggie"> Procuro opções vegetarianas, veganas ou sem glúten</label>
+    </div>
+ 
+    <div class="perg card verde-4">
+        <span class="badge">Passo 4 de 8</span>
+        <p>4. O que o seu paladar está pedindo agora?</p>
+        <label><input type="radio" name="q4" value="salgado"> Um prato salgado bem saboroso</label>
+        <label><input type="radio" name="q4" value="doce"> Uma opção doce para confortar o estômago</label>
+    </div>
+ 
+    <div class="perg card verde-5">
+        <span class="badge">Passo 5 de 8</span>
+        <p>5. Se pudesse escolher a base principal do prato, seria:</p>
+        <label><input type="radio" name="q5" value="frango"> Frango ou Atum</label>
+        <label><input type="radio" name="q5" value="legumes"> Legumes, Vegetais ou Massas leves</label>
+        <label><input type="radio" name="q5" value="queijo"> Queijo, Presunto ou Chocolate</label>
+    </div>
+
+    <div class="perg card verde-1">
+        <span class="badge">Passo 6 de 8</span>
+        <p>6. Qual acompanhamento ou bebida você imagina com essa receita?</p>
+        <label><input type="radio" name="q6" value="cafe"> Um café quentinho ou chá</label>
+        <label><input type="radio" name="q6" value="suco"> Um suco natural ou refrigerante zero</label>
+        <label><input type="radio" name="q6" value="vinho"> Um vinho ou água saborizada</label>
+    </div>
+
+    <div class="perg card verde-2">
+        <span class="badge">Passo 7 de 8</span>
+        <p>7. Como você avalia sua disposição na cozinha agora?</p>
+        <label><input type="radio" name="q7" value="facil"> Quero o mínimo de louça e esforço possível</label>
+        <label><input type="radio" name="q7" value="gourmet"> Topo montar camadas, rechear ou usar o liquidificador</label>
+    </div>
+
+    <div class="perg card verde-3">
+        <span class="badge">Passo 8 de 8</span>
+        <p>8. Que tipo de textura mais te apetece hoje?</p>
+        <label><input type="radio" name="q8" value="cremoso"> Algo cremoso, quentinho e reconfortante</label>
+        <label><input type="radio" name="q8" value="crocante"> Algo crocante ou fácil de morder</label>
+    </div>
+ 
+    <button onclick="ver()">Ver Minha Recomendação </button>
+    <div id="res"></div>
+</div>
+ 
+<script>
+function ver(){
+    const q1 = document.querySelector('input[name="q1"]:checked')?.value;
+    const q2 = document.querySelector('input[name="q2"]:checked')?.value;
+    const q3 = document.querySelector('input[name="q3"]:checked')?.value;
+    const q4 = document.querySelector('input[name="q4"]:checked')?.value;
+    const q5 = document.querySelector('input[name="q5"]:checked')?.value;
+    const q6 = document.querySelector('input[name="q6"]:checked')?.value;
+    const q7 = document.querySelector('input[name="q7"]:checked')?.value;
+    const q8 = document.querySelector('input[name="q8"]:checked')?.value;
+
+    if(!q1 || !q2 || !q3 || !q4 || !q5 || !q6 || !q7 || !q8) {
+        document.getElementById("res").innerHTML = "<div class='error-msg'>Por favor, responda todas as 8 perguntas para sabermos sua preferência!</div>";
+        document.getElementById("res").scrollIntoView({ behavior: 'smooth' });
+        return;
+    }
+
+    let receitaRecomendada = "";
+    let categoria = "";
+    
+    if (q1 === "almoco") {
+        categoria = "um Almoço incrível";
+        if (q3 === "lowcarb" || (q5 === "legumes" && q8 === "crocante")) {
+            receitaRecomendada = "Yakisoba Low carb";
+        } else if (q3 === "veggie" && q7 === "facil") {
+            receitaRecomendada = "Quiche de legumes sem glúten";
+        } else if (q2 === "rapido" && q5 === "frango") {
+            receitaRecomendada = "Wrap de frango";
+        } else if (q5 === "legumes" || (q7 === "gourmet" && q8 === "cremoso")) {
+            receitaRecomendada = "Lasanha de abobrinha";
+        } else if (q8 === "cremoso" && q5 === "frango") {
+            receitaRecomendada = "Risoto de frango e legumes";
+        } else {
+            receitaRecomendada = "Escondidinho de batata-doce";
+        }
+    } else {
+        categoria = "um Lanche delicioso";
+        if (q4 === "doce" || (q6 === "cafe" && q4 === "doce")) {
+            receitaRecomendada = "Brownie vegano de caneca";
+        } else if (q5 === "frango" || (q8 === "cremoso" && q7 === "facil")) {
+            receitaRecomendada = "Patê de atum express com torradas";
+        } else if (q2 === "rapido" && q6 === "cafe") {
+            receitaRecomendada = "Pão de queijo de frigideira";
+        } else if (q3 === "lowcarb" || q8 === "cremoso") {
+            receitaRecomendada = "Crepioca de queijo e presunto";
+        } else if (q7 === "gourmet" || q2 === "elaborado") {
+            receitaRecomendada = "Misto quente de forno";
+        } else {
+            receitaRecomendada = "Bruschetta de tomate com manjericão";
+        }
+    }
+    
+    if(!receitaRecomendada) receitaRecomendada = "Wrap de frango";
+
+    // AQUI ESTÁ A MÁGICA: O link muda dinamicamente para cada prato!
+    // Substitua o que está entre aspas pelo nome real dos seus arquivos .html
+
+    // Agora o HTML usa a variável \${linkReal} para colocar o link certo na tela
+    document.getElementById("res").innerHTML = `
+        <div class="result-box">
+            <p class="result-title">🎉 Perfil Identificado!</p>
+            <p>Com base nas suas respostas, preparamos <strong>${categoria}</strong> perfeito para o seu dia.</p>
+            <div class="recipe-badge">
+                <span>Sua Recomendação:</span>
+                <a href="login.html" class="recipe-link">${receitaRecomendada}</a>
+            </div>
+        </div>
+    `;
+    
+    document.getElementById("res").scrollIntoView({ behavior: 'smooth' });
+}
+</script>
+
+    
+<div id="cursor-customizado"></div>
+
+</body>
+</html>
